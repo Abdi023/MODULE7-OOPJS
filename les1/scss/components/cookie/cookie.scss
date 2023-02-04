@@ -1,0 +1,76 @@
+@use "../../abstract/colors";
+
+
+
+.cookie {
+    width: 30rem;
+    background: map-get(colors.$cookie, "background");
+    border-radius: 50%;
+    box-shadow:
+        inset 0 0 10rem 0rem map-get(colors.$cookie, "spots"),
+        0 2rem 2rem 0rem rgba(0, 0, 0, 0.2);
+    aspect-ratio: 1/1;
+    position: relative;
+    overflow: hidden;
+    border: .5rem solid map-get(colors.$cookie, "spots");
+    transition: .2s all;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+
+    &__spots {
+        width: 5rem;
+        aspect-ratio: 1/1;
+        background: map-get(colors.$cookie, "spots");
+        border-radius: 45%;
+        position: absolute;
+
+
+
+        &--first {
+            top: 15%;
+            left: 15%;
+        }
+
+        &--second {
+            top: 15%;
+            right: 15%;
+        }
+
+        &--third {
+            bottom: 12%;
+            left: 15%;
+        }
+
+        &--for {
+            bottom: 10%;
+            right: 20%;
+        }
+
+        &--five {
+            bottom: 40%;
+            right: 10%;
+        }
+
+        &--six {
+            top: 30%;
+            right: 40%;
+        }
+
+        &--seven {
+            bottom: 40%;
+            left: 10%;
+        }
+
+        &--eight {
+            bottom: 25%;
+            right: 45%;
+        }
+
+    }
+}
