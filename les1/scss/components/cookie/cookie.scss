@@ -3,7 +3,7 @@
 
 
 .cookie {
-    width: 30rem;
+    width: 25rem;
     background: map-get(colors.$cookie, "background");
     border-radius: 50%;
     box-shadow:
@@ -23,8 +23,19 @@
         transform: scale(0.95);
     }
 
+    &--chocolate {
+        background: #3C2A21;
+        box-shadow: 0 2rem 2rem 0rem rgba(0, 0, 0, 0.2);
+        border: 1rem solid #1C0A00;
+    }
+
+    &--chocolate &__spots {
+        background: #1C0A00;
+        border-radius: 40%;
+    }
+
     &__spots {
-        width: 5rem;
+        width: 3.2rem;
         aspect-ratio: 1/1;
         background: map-get(colors.$cookie, "spots");
         border-radius: 45%;
